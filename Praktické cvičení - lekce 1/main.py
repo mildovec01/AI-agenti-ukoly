@@ -2,28 +2,7 @@ import json
 from openai import OpenAI
 from api_key import OPENAI_API_KEY
 
-
 client = OpenAI(api_key=OPENAI_API_KEY)
-
-
-
-def add_numbers(a: float, b: float) -> float:
-    return a + b
-
-
-def subtract_numbers(a: float, b: float) -> float:
-    return a - b
-
-
-def multiply_numbers(a: float, b: float) -> float:
-    return a * b
-
-
-def divide_numbers(a: float, b: float) -> float:
-    if b == 0:
-        raise ValueError("Division by zero")
-    return a / b
-
 
 available_functions = {
     "add_numbers": add_numbers,
@@ -31,7 +10,6 @@ available_functions = {
     "multiply_numbers": multiply_numbers,
     "divide_numbers": divide_numbers,
 }
-
 
 tools = [
     {
