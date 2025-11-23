@@ -141,7 +141,7 @@ def main():
                 except Exception as e:
                     tool_result = {"error": str(e)}
 
-            print(f"Výsledek nástroje (Python): {tool_result}")
+            print(f"Výsledek nástroje: {tool_result}")
 
             messages.append(
                 {
