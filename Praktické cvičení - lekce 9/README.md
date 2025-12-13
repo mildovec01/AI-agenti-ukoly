@@ -15,6 +15,6 @@ Agent odpovídá přes LLM a umí volat nástroje (tool calling). Součástí je
 3. `python src/main.py`
 
 ## Příklady dotazů
-- Jaké je počasí v Sokolově?
-- Ulož poznámku: title="maturita" content="opakovat kužel a posloupnosti"
+- Jaké je počasí v Praze?
+- Ulož poznámku: title="maturita" content="angličtina a český jazyk"
 - Najdi poznámky o maturitě a shrň je.
