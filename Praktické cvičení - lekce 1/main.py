@@ -1,11 +1,8 @@
 import json
 from openai import OpenAI
-from api_key import OPENAI_API_KEY
-
+from secret_key import OPENAI_API_KEY
 
 client = OpenAI(api_key=OPENAI_API_KEY)
-
-
 
 def add_numbers(a: float, b: float) -> float:
     return a + b
@@ -31,7 +28,6 @@ available_functions = {
     "multiply_numbers": multiply_numbers,
     "divide_numbers": divide_numbers,
 }
-
 
 tools = [
     {
@@ -98,7 +94,7 @@ tools = [
 
 
 def main():
-    user_prompt = "Vypočítej 12 - 8 a vysvětli postup."
+    user_prompt = "Vypočítej 12 + 8 a vysvětli postup."
 
     print("USER:", user_prompt)
 
@@ -122,7 +118,7 @@ def main():
         model="gpt-5.1-chat-latest",
         messages=messages,
         tools=tools,
-        tool_choice="auto",
+        tool_choice="auto", 
     )
 
     response_message = first_response.choices[0].message
@@ -187,6 +183,10 @@ def main():
         final_answer = response_message.content
         print("\nASSISTANT (bez nástroje):")
         print(final_answer)
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":
